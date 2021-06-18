@@ -54,16 +54,16 @@ DROP TABLE IF EXISTS `customers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customers` (
-  `customer_id` int unsigned NOT NULL AUTO_INCREMENT,
-  `customer_name` varchar(100) NOT NULL,
-  `customer_phone` varchar(20) NOT NULL,
-  `customer_email` varchar(100) NOT NULL,
-  `customer_password` varchar(256) NOT NULL,
-  `customer_address` varchar(100) NOT NULL,
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(100) NOT NULL,
+  `phoneNumber` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `create_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `modified_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Dinh Queng','03551113423','dinhqueng@gmail.com','dinhqueng123','Ha Noi','2021-06-01 02:26:17','2021-06-01 02:26:17'),(2,'Van Ten','03551111223','vanten@gmail.com','vanten123','Thai Binh','2021-06-01 02:26:17','2021-06-01 02:26:17'),(3,'Nhat Menh','03555513423','nhatmenh@gmail.com','nhatmenh123','Nghe An','2021-06-01 02:26:17','2021-06-01 02:26:17');
+INSERT INTO `customers` VALUES (1,'Dinh Queng','03551113423','dinhqueng@gmail.com','dinhqueng123','Ha Noi','2021-06-01 02:26:17','2021-06-01 02:26:17'),(2,'Van Ten','03551111223','vanten@gmail.com','vanten123','Thai Binh','2021-06-01 02:26:17','2021-06-01 02:26:17'),(3,'Nhat Menh','03555513423','nhatmenh@gmail.com','nhatmenh123','Nghe An','2021-06-01 02:26:17','2021-06-01 02:26:17'),(4,'Quách Đình Quang','0355764662','dinhquang149999@gmail.com','dinhquang123','Vinh Hung','2021-06-15 04:54:11','2021-06-15 04:54:11');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -85,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-01  9:58:04
+-- Dump completed on 2021-06-18 18:30:47
